@@ -1,0 +1,116 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+hr {
+    background-color: black;
+    border: 1px solid black;
+}
+
+
+/* Styling container div */
+
+#container {
+    background: #D7BDE2;
+    border: 2px solid black;
+    height: 500px;
+    width: 380px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-top: 20px;
+}
+
+
+/* Styling heading div */
+
+#heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    word-spacing: 10px;
+    padding: 10px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+
+/* Styling form */
+
+#form {
+    padding: 20px;
+}
+
+label {
+    height: 30px;
+    display: inline-block;
+    margin: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+#name1 {
+    margin-left: 25px;
+}
+
+input {
+    height: 30px;
+    display: inline-block;
+    margin: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+::placeholder {
+    letter-spacing: 2px;
+    color: black;
+}
+
+
+/* Styling button*/
+
+#btn {
+    width: calc(100% - 50px);
+    height: 30px;
+    display: block;
+    margin: auto;
+    color: black;
+    background-color: yellow;
+    font-size: 15px;
+    margin-top: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+
+/* Styling table */
+
+#result-box {
+    height: 150px;
+    width: 350px;
+    position: absolute;
+    padding-top: 6px;
+    margin: auto;
+}
+
+#myTable {
+    position: absolute;
+}
+
+#myTable tr th {
+    padding: 10px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head th:replace="layout :: site-head">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mini Project</title>
+</head>
+<header th:replace="layout :: logged-out"></header>
+<body>
+    <div id="container">
+        <!-- Creating Heading div -->
+        <div id="heading">
+            Details Form
+        </div>
+        <!-- Creating form -->
+        <form id="form" name="form" autocomplete="off" method="post" th:object="${user}" th:action="@{/users/login}">
+            <label id="name1">Name : </label>
+            <input type="text" name="name" id="name" placeholder="Enter Name..." th:field="${user.fullname}">
+            <br>
+            <br>
+            <label>Mob. No. : </label>
+            <input type="number" name="number" id="mobile" onblur="checkLen()" placeholder="Enter Mobile No." th:field="${user.mobileNumber}">
+            <p id="num-res"></p>
+            <br>
+            <label>Email ID :</label>
+            <input type="text" name="email" id="email" onblur="checkEmail()" placeholder="Enter Email" th:field="${user.email}">
+            <p id="email-res"></p>
+            <br>
+            <button type="submit" id="btn" value="Register">SUBMIT</button>
+
+        </form>
+        <hr>
+        <!-- Div for appending text -->
+        <div id="result-box">
+            <table id="myTable">
+                <tr>
+                    <th>Name</th>
+                    <th>Mob No.</th>
+                    <th>Email</th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- Give configuration to jpa -->
+
+    <persistence xmlns="http://java.sun.com/xml/ns/persistence"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                 ">
+
+        <!--    configurations-->
+        <persistence-unit name="techblog">
+            <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+            <properties>
+                <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+                <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/technicalblog"/>
+                <property name="javax.persistence.jdbc.user" value="postgres"/>
+                <property name="javax.persistence.jdbc.password" value="password"/>
+
+                <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect"/>
+                <property name="hibernate.temp.use_jdbc_metadata.defaults" value="false"/>
+                <property name="hibernate.show_sql" value="true"/>
+                <property name="hibernate.hbm2ddl.auto" value="update"></property>
+
+            </properties>
+        </persistence-unit>
+
+    </persistence>
+</beans>
